@@ -15,7 +15,7 @@ public class JMSConfig {
     public MessageConverter messageConverter() {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
-        converter.setTypeIdPropertyName("_type");
+        converter.setTypeIdPropertyName("_type"); // the property holding the type of the message, in this case, HelloWorldMessage
 
         return converter;
     }
