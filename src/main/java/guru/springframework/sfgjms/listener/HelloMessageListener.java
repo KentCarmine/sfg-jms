@@ -15,7 +15,7 @@ import javax.jms.Message;
 import java.util.UUID;
 
 @RequiredArgsConstructor
-@Component
+//@Component
 public class HelloMessageListener {
 
     private final JmsTemplate jmsTemplate;
@@ -24,8 +24,8 @@ public class HelloMessageListener {
     public void listen(@Payload HelloWorldMessage helloWorldMessage,
                        @Headers MessageHeaders headers, Message message) {
 
-        System.out.println("I got a message!!!");
-        System.out.println(helloWorldMessage);
+//        System.out.println("I got a message!!!");
+//        System.out.println(helloWorldMessage);
 
         // uncomment to view retry count in debugger
 //        throw new RuntimeException("foo");
